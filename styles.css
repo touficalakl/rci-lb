@@ -712,6 +712,7 @@ body, input, textarea, button {
   font-size: 2rem;
   cursor: pointer;
   z-index: 30;
+  color: var(--dark-gray);
 }
 
 /* 2) Slide-out mobile menu panel */
@@ -865,22 +866,22 @@ body, input, textarea, button {
   }
 }
 
-/* === MOBILE MENU ITEM ACCENT BAR === */
 @media only screen and (max-width: 767px) {
-  .mobile-menu .nav-list li {
-    position: relative;
-    padding-left: 1.5rem; /* make room for the bar */
+  /* Center all about sections on mobile */
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
   }
-
-  .mobile-menu .nav-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;              /* thickness of the bar */
-    height: 100%;            /* span full link height */
-    background: var(--primary-orange);
-    border-radius: 2px;
+  .about-container {
+    flex-direction: column;
+    gap: 1.5rem;
   }
-}
-
+  .about-image,
+  .about-text {
+    width: 100%;
+  }
+  .about-image img {
+    max-width: 80%;
+    margin: 1rem auto;
+  }
